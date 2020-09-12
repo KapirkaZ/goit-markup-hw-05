@@ -655,10 +655,13 @@ img {
 
 .footer-social .link {
   background-color: rgba(255, 255, 255, 0.1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link {
   text-decoration: none;
+  transition-duration: 250ms;
+  /* transition-property: background-color; */
 }
 
 .portfol .item:hover {
@@ -704,4 +707,83 @@ img {
 
 .product-thumb {
   position: relative;
+}
+
+/* Portfolio */
+
+.description {
+  position: absolute;
+  /* right: 24px;
+  left: 24px;
+  bottom: 63px; */
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 322px;
+  height: 168px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+  opacity: 0;
+
+  /* outline: 2px solid tomato; */
+}
+
+.portfolio-description:hover .description {
+  opacity: 1;
+  transition: 250ms;
+}
+
+.product-thumb::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.product-thumb:hover::before {
+  opacity: 1;
+}
+
+/* модальное окно */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 528px;
+  min-width: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
