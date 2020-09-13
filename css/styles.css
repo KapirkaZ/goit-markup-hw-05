@@ -723,6 +723,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 250ms var(--timing-function);
 
   width: 322px;
   height: 168px;
@@ -736,23 +737,39 @@ img {
   letter-spacing: 0.03em;
 
   color: #ffffff;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  display: inline-block;
+
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+
   opacity: 0;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 
   /* outline: 2px solid tomato; */
 }
 
-.portfolio-description:hover .description {
+.portfol .link:hover .description,
+.portfol .link:focus .description {
+  transform: translateY(0);
+}
+
+.portfolio-hover:hover .description {
   opacity: 1;
   transition: 250ms;
 }
 
-.product-thumb::before {
-  display: inline-block;
+.portfolio-hover .product-thumb::before {
   position: absolute;
   content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+
   opacity: 0;
 }
 
@@ -811,9 +828,10 @@ img {
   margin: 0;
   font-size: 18px;
   line-height: 1.56;
-  color: var(--main-bg-color);
+  color: var(--main-title-text-color);
 }
 
+/* подчеркивание текущей страницы */
 .site-nav .current::after {
   position: absolute;
   bottom: 0;
