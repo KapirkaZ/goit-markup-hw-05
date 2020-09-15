@@ -709,6 +709,7 @@ img {
 
 .product-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 /* Portfolio */
