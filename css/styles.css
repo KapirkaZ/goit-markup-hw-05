@@ -218,7 +218,9 @@ button {
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-info .link:hover,
-.site-info .link:focus {
+.site-info .link:focus,
+.adres-nav .link:hover,
+.adres-nav .link:focus {
   color: var(--accent-color);
 }
 
@@ -348,6 +350,7 @@ img {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
 }
 
 /* Наша команда */
@@ -619,6 +622,23 @@ img {
   background-color: var(--main-bg-color);
 }
 
+.feature-list-workers .title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--button-color-secondary);
+}
+
+.feature-list-workers .text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--second-text-color);
+  font-size: 16px;
+  line-height: 1.19;
+}
+
 .social-list .link {
   display: flex;
   justify-content: center;
@@ -631,8 +651,14 @@ img {
 .social-list .icon {
   width: 20px;
   height: 20px;
-  fill: var(--client-logo);
+  fill: #afb1b8;
+  transition: fill 250ms var(--timing-function);
 }
+
+/* .link .icons {
+  fill: var(--client-logo);
+  transition: background-color 250ms var(--timing-function);
+} */
 
 .social-list .link:hover .icon {
   fill: var(--main-title-text-color);
@@ -675,6 +701,10 @@ img {
 .portfol .item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.adres-nav .link:hover {
+  fill: var(--accent-color);
 }
 
 /*  Позиционирование студия*/
